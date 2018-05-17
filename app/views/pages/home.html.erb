@@ -1,0 +1,21 @@
+<div class="banner">
+  <div class="banner-content">
+    <h1><span id="banner-typed-text"></span></h1>
+    <hr style="width:40%;">
+    <div class="container">
+    <%= simple_form_for :search, :url => places_path, method: :get, html: { class: 'form-inline' },
+      wrapper: :horizontal_form do |f| %>
+      <div class="form-inputs">
+        <%= f.input :city, required: true, autofocus: true, label: false, placeholder: 'City name..', input_html: { id: 'submit-search-value' } %>
+        <%= f.button :submit, "Search!", class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+    </div>
+    <a href="#description"><i class="fa fa-angle-down arrow faa-fast faa-float animated"></i></a>
+  </div>
+</div>
+<div class="container" id="description">
+  <h1 class="text-center">How it works</h1>
+
+
+</div>
